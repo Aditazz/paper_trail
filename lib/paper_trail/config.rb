@@ -32,9 +32,7 @@ module PaperTrail
     end
 
     def track_associations
-      @track_associations.nil? ?
-        PaperTrail::VersionAssociation.table_exists? :
-        @track_associations
+      @track_associations = true
     end
     alias_method :track_associations?, :track_associations
 
